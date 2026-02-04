@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import NavbarIndex from './components/Navbar';
+import FooterIndex from './components/Footer';
+import Home from './pages/Home';
+import ProfileData from './configurations/data/ProfileData';
 
 function App() {
+  // ดึงชื่อจาก ProfileData เพื่อส่ง props ไปยัง Navbar และ Footer
+  const { name } = ProfileData;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Navbar - ส่ง props: name */}
+      <NavbarIndex name={name} />
+
+      {/* Main Content */}
+      <main>
+        <Home />
+      </main>
+
+      {/* Footer - ส่ง props: name */}
+      <FooterIndex name={name} />
     </div>
   );
 }
