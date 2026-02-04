@@ -1,20 +1,26 @@
 import React from 'react'
 
-// รับ props: email, socialLinks (array of { name, icon, url })
-const ContactSection = ({ email, socialLinks }) => {
+// Contact Section receives props: contact, socialLinks
+const ContactSection = ({ contact, socialLinks }) => {
     return (
         <section id="contact" className="py-5 bg-dark text-white">
             <div className="container text-center">
                 <h2 className="mb-5 fw-bold">
                     <i className="fa-solid fa-address-book me-2"></i>
-                    ติดต่อ
+                    Contact Me
                 </h2>
 
-                {/* Email */}
-                <p className="lead mb-4">
-                    <i className="fa-solid fa-envelope me-2"></i>
-                    {email}
-                </p>
+                {/* Contact Details */}
+                <div className="mb-4">
+                    <p className="mb-2">
+                        <i className="fa-solid fa-envelope me-2"></i>
+                        {contact.email}
+                    </p>
+                    <p className="mb-2">
+                        <i className="fa-solid fa-phone me-2"></i>
+                        {contact.phone}
+                    </p>
+                </div>
 
                 {/* Social Links */}
                 <div className="d-flex justify-content-center gap-4">

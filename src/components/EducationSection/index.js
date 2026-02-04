@@ -1,13 +1,13 @@
 import React from 'react'
 
-// รับ props: education (array of { degree, major, school, year })
+// Education Section receives props: education (array)
 const EducationSection = ({ education }) => {
     return (
-        <section id="education" className="py-5 bg-light">
+        <section id="education" className="py-5 bg-white">
             <div className="container">
                 <h2 className="text-center mb-5 fw-bold">
                     <i className="fa-solid fa-graduation-cap me-2"></i>
-                    การศึกษา
+                    Education
                 </h2>
 
                 <div className="row justify-content-center">

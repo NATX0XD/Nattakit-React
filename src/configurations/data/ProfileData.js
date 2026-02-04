@@ -1,43 +1,42 @@
-// ข้อมูลส่วนตัวทั้งหมด - ส่งผ่าน props ไปยัง components ต่างๆ
+// Profile Data - All personal information passed via props
 import Me from "../../images/me/me1.JPG"
-import Food1 from "../../images/food/food1.jpeg"
-import Food2 from "../../images/food/food2.jpeg"
 
 const ProfileData = {
-    // ข้อมูลพื้นฐาน
+    // Basic Info
     name: "Nattakit Jinakul",
     nickname: "Nat",
     title: "Web Developer | Student",
-    email: "nattakit@gmail.com",
-    age: 25,
-    bio: "สวัสดีครับ ผมเป็นนักศึกษาที่สนใจเรื่อง Web Development และกำลังเรียนรู้ React.js",
+    bio: "Hello! I'm a passionate student interested in Web Development and currently learning React.js",
 
-    // รูปโปรไฟล์
+    // Profile Image
     profileImage: Me,
 
-    // ทักษะ
-    skills: [
-        { name: "React", level: 80, color: "primary" },
-        { name: "JavaScript", level: 75, color: "warning" },
-        { name: "HTML/CSS", level: 90, color: "danger" },
-        { name: "Bootstrap", level: 85, color: "info" }
-    ],
+    // Personal Details
+    personalInfo: {
+        fullName: "Mr. Nattakit Jinakul",
+        nickname: "Nat",
+        age: 25,
+        dateOfBirth: "January 1, 2001",
+        nationality: "Thai",
+        religion: "Buddhism",
+        address: "Bangkok, Thailand"
+    },
 
-    // การศึกษา
+    // Contact Info
+    contact: {
+        email: "nattakit@gmail.com",
+        phone: "+66 123 456 789",
+        line: "@nattakit"
+    },
+
+    // Education
     education: [
         {
-            degree: "ปริญญาตรี",
-            major: "วิทยาการคอมพิวเตอร์",
-            school: "มหาวิทยาลัย...",
-            year: "2564 - ปัจจุบัน"
+            degree: "Bachelor's Degree",
+            major: "Computer Science",
+            school: "University Name",
+            year: "2021 - Present"
         }
-    ],
-
-    // Gallery รูปภาพ
-    gallery: [
-        { image: Me, title: "Profile", category: "me" },
-        { image: Food1, title: "Food 1", category: "food" },
-        { image: Food2, title: "Food 2", category: "food" }
     ],
 
     // Social Links

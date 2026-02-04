@@ -1,33 +1,30 @@
 import React from 'react'
 
-// Import ข้อมูลจาก ProfileData
+// Import data from ProfileData
 import ProfileData from '../configurations/data/ProfileData'
 
 // Import Components
 import HeroSection from '../components/HeroSection'
 import AboutSection from '../components/AboutSection'
-import GallerySection from '../components/GallerySection'
 import EducationSection from '../components/EducationSection'
 import ContactSection from '../components/ContactSection'
 
 const Home = () => {
-    // ดึงข้อมูลจาก ProfileData
+    // Get data from ProfileData
     const {
         name,
         title,
         profileImage,
         bio,
-        age,
-        email,
-        skills,
+        personalInfo,
+        contact,
         education,
-        gallery,
         socialLinks
     } = ProfileData
 
     return (
         <>
-            {/* Hero Section - ส่ง props: name, title, profileImage, bio */}
+            {/* Hero Section - props: name, title, profileImage, bio */}
             <HeroSection
                 name={name}
                 title={title}
@@ -35,20 +32,20 @@ const Home = () => {
                 bio={bio}
             />
 
-            {/* About Section - ส่ง props: age, email, skills */}
+            {/* About Section - props: personalInfo, contact */}
             <AboutSection
-                age={age}
-                email={email}
-                skills={skills}
+                personalInfo={personalInfo}
+                contact={contact}
             />
 
-            {/* Gallery Section - ส่ง props: gallery */}
-            <GallerySection gallery={gallery} />
-
-            {/* Education Section - ส่ง props: education */}
+            {/* Education Section - props: education */}
             <EducationSection education={education} />
 
-
+            {/* Contact Section - props: contact, socialLinks */}
+            <ContactSection
+                contact={contact}
+                socialLinks={socialLinks}
+            />
         </>
     )
 }
